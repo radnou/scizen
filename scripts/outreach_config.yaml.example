@@ -1,0 +1,50 @@
+# Outreach Config Template for Scizen
+# Copy to outreach_config.yaml and fill
+
+campaigns:
+  - name: "reddit_sci_beta_2026"
+    subject: "On a un outil pour gérer votre SCI familiale"
+    template: betaInvite
+    max_daily_sends: 20
+    filters:
+      min_score: 30
+      sources: [reddit, forum]
+      language: fr
+
+  - name: "forum_sci_beta_2026"
+    subject: "Gérer la SCI de vos parents sans en avoir l'air"
+    template: betaInvite
+    max_daily_sends: 10
+    filters:
+      min_score: 40
+      sources: [forum]
+
+resend:
+  from_name: "Scizen"
+  from_email: "hello@scizen.fr"
+  rate_limit_per_second: 2
+
+lemon_squeezy:
+  checkout_url: "https://scizen.lemonsqueezy.com/buy/VARIANT-ID"
+
+scoring:
+  keywords_high:
+    - galere
+    - galere
+    - perdu
+    - paie
+    - complique
+    - fait chier
+    - outil
+    - appli
+    - logiciel
+    - solution
+  keywords_medium:
+    - SCI familiale
+    - parts sociales
+    - herite
+    - succession
+    - assemblee generale
+    - gerer SCI
+  bonus_reddit: 10
+  max_score: 100
